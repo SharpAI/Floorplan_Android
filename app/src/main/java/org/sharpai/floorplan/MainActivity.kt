@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         wvSample.loadUrl("http://floorplan.workai.tiegushi.com")
-
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
